@@ -14,7 +14,6 @@ export default function Prediction() {
   const [progress, setProgress] = useState(0);
   const [activeTab, setActiveTab] = useState<"symptoms" | "effects" | "solutions" | "fertilizers">("symptoms");
   const inputRef = useRef<HTMLInputElement>(null);
-  
 
   const processFile = useCallback((file: File) => {
     if (!file.type.startsWith("image/")) {
@@ -285,6 +284,9 @@ export default function Prediction() {
                     </button>
                   ))}
                 </div>
+                
+
+              
 
                 {/* Tab Content */}
                 <div className="tab-content" role="tabpanel">
@@ -393,125 +395,7 @@ export default function Prediction() {
                   )}
                 </div>
               </div>
-
-              {/* ── PRINT REPORT (Hidden on screen, visible in print) ── */}
-              <div className="print-report">
-
-              {/* PAGE 1 - Uploaded Image */}
-              <div className="print-page">
-                <div className="print-layout">
-
-                  {preview && (
-                    <div className="print-image-section">
-                      <img src={preview} alt="Uploaded leaf" className="print-image" />
-                    </div>
-                  )}
-
-                  <div className="print-data">
-                    <h2>{result.name}</h2>
-                    <p><strong>Scientific Name:</strong> {result.scientificName}</p>
-                    <p><strong>Confidence:</strong> {result.confidence}%</p>
-                    <p><strong>Severity:</strong> {result.severity}</p>
-                    <p>{result.description}</p>
-                  </div>
-
-                </div>
-
-              </div>
-
-
-                {/* PAGE 2 - Symptoms */}
-                <div className="print-page">
-                <h2>🔍 Symptoms</h2>
-
-                <div className="print-symptoms">
-                  {result.symptoms.map((s, i) => (
-                    <div key={i} className="print-symptom-item">
-                      <span className="print-symptom-num">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span className="print-symptom-text">{s}</span>
-                    </div>
-                  ))}
-                </div>
-
-              </div>
-
-                {/* PAGE 3 - Effects */}
-                <div className="print-page effects-print-page">
-                  <h2>⚠ Effects</h2>
-
-                {/* PAGE 3 - Effects */}
-
-
-                  <div className="effects-grid">
-                    {result.effects.map((e, i) => (
-                      <div key={i} className="effect-card">
-                        <div
-                          className="effect-icon"
-                          style={{
-                            background: `${result.severityColor}15`,
-                            color: result.severityColor
-                          }}
-                        >
-                          ⚠
-                        </div>
-                        <p>{e}</p>
-                      </div>
-                    ))}
-                  
-
-                  {result.affectedParts.length > 0 && (
-                    <div className="affected-parts">
-                      <h3>Affected Plant Parts</h3>
-
-                      <div className="parts-list">
-                        {result.affectedParts.map((p) => (
-                          <span key={p} className="part-chip">{p}</span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-                </div>
-
-                {/* PAGE 4 - Solutions */}
-                <div className="print-page">
-                  <h2>💊 Solutions</h2>
-
-                  <ul>
-                    {result.solutions.map((s, i) => (
-                      <li key={i}>{s}</li>
-                    ))}
-                  </ul>
-
-                  <h3>Prevention Measures</h3>
-                  <ul>
-                    {result.preventions.map((p, i) => (
-                      <li key={i}>{p}</li>
-                    ))}
-                  </ul>
-                </div>
-                 
-                {/* PAGE 5 - Fertilizers */}
-                <div className="print-page">
-                  <h2>🌱 Recommended Fertilizers</h2>
-
-                  {result.fertilizers.map((f, i) => (
-                    <div key={i} style={{ marginBottom: "20px" }}>
-                      <h4>{f.name}</h4>
-                      <p><strong>NPK:</strong> {f.npk}</p>
-                      <p><strong>Dosage:</strong> {f.dosage}</p>
-                      <p>{f.purpose}</p>
-                    </div>
-                  ))}
-                </div>
-
-              </div> 
-
-
-
-
+              
               {/* Deterministic notice */}
               <div className="deterministic-notice">
                 <span>🔒</span>
@@ -519,6 +403,7 @@ export default function Prediction() {
               </div>
             </div>
           )}
+
 
           {/* ── Error ── */}
           {state === "error" && (

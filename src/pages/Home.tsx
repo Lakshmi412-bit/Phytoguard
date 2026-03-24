@@ -14,7 +14,7 @@ const FEATURES = [
   {
     icon: "🧠",
     title: "Deep Learning CNN",
-    desc: "Powered by a custom Convolutional Neural Network trained on the PlantVillage dataset with over 54,000 annotated tomato leaf images.",
+    desc: "Powered by a custom Region-based Convolutional Neural Network trained on the Tomato Leaf disease detection dataset with over 54,000 annotated tomato leaf images.",
   },
   {
     icon: "🎯",
@@ -91,9 +91,6 @@ export default function Home() {
               PhytoGuard - T<br />
               <span className="hero-title-accent">Visual Representation With Deep Learning Approches For Tomato Leaf Disease Detection</span>
             </h1>
-            <p className="hero-subtitle">
-              Upload a tomato leaf photo and our CNN model — trained on 54,000+ images — instantly diagnoses diseases with ≥95% accuracy, complete treatment plans, and fertilizer recommendations.
-            </p>
             <div className="hero-actions">
               <Link to="/prediction" className="btn btn-primary btn-lg">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
@@ -114,6 +111,8 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          
         </section>
 
         {/* ── FEATURES ── */}
@@ -168,7 +167,7 @@ export default function Home() {
               <div className="badge badge-yellow">Detection Database</div>
               <h2>10 Most Tomato Disease Classes</h2>
               <div className="divider" />
-              <p>Trained on the Tomato Leaf dataset — covering all major tomato leaf diseases.</p>
+              <p>Trained on the Tomato Leaf Disease Detection benchmark dataset — covering all major tomato leaf diseases.</p>
             </div>
             <div className="diseases-grid">
               {DISEASES_PREVIEW.map((d) => (
@@ -202,7 +201,7 @@ export default function Home() {
                 </p>
                 <ul className="sample-list">
                   <li><span className="check">✓</span> EfficientNet-B4 backbone architecture</li>
-                  <li><span className="check">✓</span> Tomato dataset — 54,306 images</li>
+                  <li><span className="check">✓</span> Tomato Lead Disease Detection dataset — 54,306 images</li>
                   <li><span className="check">✓</span> Deterministic FNV-1a hash-based inference</li>
                   <li><span className="check">✓</span> Confidence score + disease classification</li>
                   <li><span className="check">✓</span> Treatment & fertilizer recommendations</li>

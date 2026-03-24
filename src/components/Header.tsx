@@ -27,10 +27,11 @@ export default function Header() {
   return (
     <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
       <div className="header-inner">
+        
         {/* Logo */}
         <Link to="/" className="header-logo">
           <div className="logo-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
               <circle cx="20" cy="22" r="14" fill="#c0392b" />
               <path d="M20 8 C20 8 16 4 12 5 C16 6 18 10 20 8Z" fill="#27ae60" />
               <path d="M20 8 C20 8 24 4 28 5 C24 6 22 10 20 8Z" fill="#27ae60" />
@@ -40,30 +41,31 @@ export default function Header() {
             </svg>
           </div>
           <div className="logo-text">
-            <span className="logo-name">TomatoAI</span>
+            <span className="logo-name">Tomato Leaf AI</span>
             <span className="logo-tagline">Disease Detection</span>
           </div>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="header-nav" aria-label="Main navigation">
+        <nav className="header-nav">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`nav-link ${location.pathname === link.path ? "active" : ""}`}
+              className={`nav-link ${
+                location.pathname === link.path ? "active" : ""
+              }`}
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        {/* CTA */}
+        {/* Right Section */}
         <div className="header-actions">
+          
+          {/* Desktop CTA */}
           <Link to="/prediction" className="header-cta">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-              <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" />
-            </svg>
             Analyze Leaf
           </Link>
 
@@ -71,8 +73,7 @@ export default function Header() {
           <button
             className={`hamburger ${menuOpen ? "open" : ""}`}
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
+            aria-label="Menu"
           >
             <span />
             <span />
@@ -82,17 +83,21 @@ export default function Header() {
       </div>
 
       {/* Mobile Nav */}
-      <div className={`mobile-nav ${menuOpen ? "open" : ""}`} aria-hidden={!menuOpen}>
+      <div className={`mobile-nav ${menuOpen ? "open" : ""}`}>
         {NAV_LINKS.map((link) => (
           <Link
             key={link.path}
             to={link.path}
-            className={`mobile-nav-link ${location.pathname === link.path ? "active" : ""}`}
+            className={`mobile-nav-link ${
+              location.pathname === link.path ? "active" : ""
+            }`}
           >
             {link.label}
           </Link>
         ))}
-        <Link to="/prediction" className="header-cta">
+
+        {/* Mobile CTA */}
+        <Link to="/prediction" className="mobile-nav-cta">
           Analyze Leaf Now →
         </Link>
       </div>

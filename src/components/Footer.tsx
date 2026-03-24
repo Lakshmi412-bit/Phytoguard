@@ -82,7 +82,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container">
           <p>© {year} TomatoAI Disease Detection System. Final Year Project — AI & Deep Learning.</p>
-          <p>Built with CNN Deep Learning | PlantVillage Dataset | ≥95% Validation Accuracy</p>
+          <p>Built with R-CNN Deep Learning | Tomato Leaf Disease Detection Dataset | ≥95% Validation Accuracy</p>
         </div>
       </div>
     </footer>
