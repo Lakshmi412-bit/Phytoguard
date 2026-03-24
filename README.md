@@ -25,7 +25,7 @@ Node.js,
 Hono Framework,
 CORS Middleware
 
-# 🧠 Dataset Reference
+## 🧠 Dataset Reference
 The disease categories and information in this project are based on the PlantVillage Tomato Leaf Dataset available on Kaggle.
 🔗 Dataset Link:
 https://www.kaggle.com/code/mohammedhamzamoawad/tomato-leaf-disease-detection/input
@@ -49,26 +49,26 @@ These classes are used as reference categories in the system.
 ## 💻 How to Run the Project Locally (Frontend + Backend)
 Make sure you have Node.js and npm installed.
 
-# Step 1: Clone the Repository
+### Step 1: Clone the Repository
 git clone <YOUR_GIT_URL>
 cd <YOUR_PROJECT_NAME>
 🖥️ Run Frontend (React)
-# Step 2: Go to Frontend Folder
+### Step 2: Go to Frontend Folder
 cd frontend
-# Step 3: Install Dependencies
+### Step 3: Install Dependencies
 npm install
-# Step 4: Start Frontend Server
+### Step 4: Start Frontend Server
 npm run dev
 
 👉 Frontend will run on:
 http://localhost:5173
 
 ⚙️ Run Backend (Node.js + Hono)
-# Step 5: Open New Terminal & Go to Backend Folder
+### Step 5: Open New Terminal & Go to Backend Folder
 cd backend
-# Step 6: Install Dependencies
+### Step 6: Install Dependencies
 npm install
-# Step 7: Start Backend Server
+### Step 7: Start Backend Server
 npm run dev
 
 👉 Backend will run on (example):
