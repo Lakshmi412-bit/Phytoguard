@@ -75,15 +75,15 @@ npm run dev
 http://localhost:8787
 
 # 🌟 Features
-🌱 Tomato disease detection (simulated)
-📊 Detailed disease information (Symptoms, Effects, Solutions)
-🖼️ Image upload (drag & drop supported)
-🖨️ Printable report generation
+🌱 Tomato disease detection (simulated),
+📊 Detailed disease information (Symptoms, Effects, Solutions),
+🖼️ Image upload (drag & drop supported),
+🖨️ Printable report generation,
 📱 Responsive UI
 
 # 🔮 Future Enhancements
-Integration with real Machine Learning models
-Backend database (MongoDB)
-Real-time disease prediction using AI
+Integration with real Machine Learning models,
+Backend database (MongoDB),
+Real-time disease prediction using AI,
 Mobile app support
 
