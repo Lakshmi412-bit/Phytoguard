@@ -8,7 +8,12 @@ The system displays disease information such as symptoms, effects, solutions, pr
 Currently, the system demonstrates disease identification using predefined disease data and simulated detection logic.
 
 ## Technologies Used
-=======
+React.js
+TypeScript (TSX)
+React Router DOM
+Node.js
+Hono Framework
+
 # Welcome to your PhytoGuard project
 
 ## Project info
